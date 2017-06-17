@@ -160,11 +160,7 @@ public class MainGame extends AppCompatActivity {
             btnFireNPC.setEnabled(false);
         }
 
-
-
-        Toast.makeText(getApplicationContext(), plAtk.toString() + " vs " + npcAtk.toString(), Toast.LENGTH_SHORT).show();
         if(testPlayerWin(plAtk, npcAtk) == 1) {
-            Toast.makeText(getApplicationContext(), "Player Win", Toast.LENGTH_SHORT).show();
 
             String val_str = txtScore.getText().toString();
             int val = Integer.parseInt(val_str);
@@ -174,7 +170,6 @@ public class MainGame extends AppCompatActivity {
         } else if(testPlayerWin(plAtk, npcAtk) == 0) {
             Toast.makeText(getApplicationContext(), "Tie", Toast.LENGTH_SHORT).show();
         } else if(testPlayerWin(plAtk, npcAtk) == -1) {
-            Toast.makeText(getApplicationContext(), "NPC Win", Toast.LENGTH_SHORT).show();
 
             String val_str = txtScoreNPC.getText().toString();
             int val = Integer.parseInt(val_str);
