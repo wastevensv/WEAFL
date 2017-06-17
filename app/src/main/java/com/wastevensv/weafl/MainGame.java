@@ -8,10 +8,12 @@ import android.widget.TextView;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class MainGame extends AppCompatActivity {
     private final double ELEMENT_ADVANTAGE = 2;
 
-    private enum Elementals {Water, Earth, Air, Fire};
+    private enum Elementals {Water, Earth, Air, Fire}
 
     private TextView txtWaterNPC, txtEarthNPC, txtAirNPC, txtFireNPC;
     private Button btnWaterNPC, btnEarthNPC, btnAirNPC, btnFireNPC;
@@ -72,10 +74,6 @@ public class MainGame extends AppCompatActivity {
     }
 
     public void onAttack(Elementals plAtk) {
-        btnWaterNPC.setEnabled(true);
-        btnEarthNPC.setEnabled(true);
-        btnAirNPC.setEnabled(true);
-        btnFireNPC.setEnabled(true);
 
         btnWater.setEnabled(true);
         btnEarth.setEnabled(true);
@@ -117,6 +115,11 @@ public class MainGame extends AppCompatActivity {
         }
 
         Elementals npcAtk = getNPCAtk();
+
+        btnWaterNPC.setEnabled(true);
+        btnEarthNPC.setEnabled(true);
+        btnAirNPC.setEnabled(true);
+        btnFireNPC.setEnabled(true);
 
         if(npcAtk == Elementals.Water) {
             String val_str = txtWaterNPC.getText().toString();
@@ -165,7 +168,33 @@ public class MainGame extends AppCompatActivity {
     }
 
     private Elementals getNPCAtk() {
-        return Elementals.Air;
+        Random r = new Random();
+        int choice = r.nextInt(4);
+        if(choice == 0) {
+            if(btnWaterNPC.isEnabled()) {
+                return Elementals.Water;
+            } else {
+                return Elementals.Earth;
+            }
+        } else if(choice == 1) {
+            if(btnEarthNPC.isEnabled()) {
+                return Elementals.Earth;
+            } else {
+                return Elementals.Air;
+            }
+        } else if(choice == 2) {
+            if(btnAirNPC.isEnabled()) {
+                return Elementals.Air;
+            } else {
+                return Elementals.Fire;
+            }
+        } else {
+            if(btnFireNPC.isEnabled()) {
+                return Elementals.Fire;
+            } else {
+                return Elementals.Water;
+            }
+        }
     }
 
     private double getMultiplier(Elementals a, Elementals b) {
