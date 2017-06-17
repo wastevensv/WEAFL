@@ -21,11 +21,16 @@ public class MainGame extends AppCompatActivity {
     private TextView txtWater, txtEarth, txtAir, txtFire;
     private Button btnWater, btnEarth, btnAir, btnFire;
 
+    private TextView txtScore, txtScoreNPC;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_game);
+
+        txtScore = (TextView)findViewById(R.id.txtScore);
+        txtScoreNPC = (TextView)findViewById(R.id.txtScoreNPC);
 
         txtWaterNPC = (TextView)findViewById(R.id.txtWaterNPC);
         txtEarthNPC = (TextView)findViewById(R.id.txtEarthNPC);
@@ -160,10 +165,22 @@ public class MainGame extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), plAtk.toString() + " vs " + npcAtk.toString(), Toast.LENGTH_SHORT).show();
         if(testPlayerWin(plAtk, npcAtk) == 1) {
             Toast.makeText(getApplicationContext(), "Player Win", Toast.LENGTH_SHORT).show();
+
+            String val_str = txtScore.getText().toString();
+            int val = Integer.parseInt(val_str);
+            val++;
+
+            txtScore.setText(String.valueOf(val));
         } else if(testPlayerWin(plAtk, npcAtk) == 0) {
             Toast.makeText(getApplicationContext(), "Tie", Toast.LENGTH_SHORT).show();
         } else if(testPlayerWin(plAtk, npcAtk) == -1) {
             Toast.makeText(getApplicationContext(), "NPC Win", Toast.LENGTH_SHORT).show();
+
+            String val_str = txtScoreNPC.getText().toString();
+            int val = Integer.parseInt(val_str);
+            val++;
+
+            txtScoreNPC.setText(String.valueOf(val));
         }
     }
 
@@ -222,7 +239,7 @@ public class MainGame extends AppCompatActivity {
     private int testPlayerWin(Elementals playerAtk, Elementals npcAtk) {
         double playerAtkLvl = 0;
         if(playerAtk == Elementals.Water) {
-            String val_str = txtFire.getText().toString();
+            String val_str = txtWater.getText().toString();
             playerAtkLvl = Integer.parseInt(val_str);
         } else if(playerAtk == Elementals.Earth) {
             String val_str = txtEarth.getText().toString();

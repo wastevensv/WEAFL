@@ -21,7 +21,6 @@
         android:id="@+id/btnEarthNPC"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
         android:text="@string/earth"
         app:layout_constraintTop_toTopOf="@+id/gdlTop"
         app:layout_constraintLeft_toRightOf="@+id/btnWater"
@@ -31,7 +30,6 @@
         android:id="@+id/btnAirNPC"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
         android:text="@string/air"
         app:layout_constraintTop_toTopOf="@+id/gdlTop"
         app:layout_constraintLeft_toRightOf="@+id/btnEarth"
@@ -41,7 +39,6 @@
         android:id="@+id/btnFireNPC"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
         android:text="@string/fire"
         app:layout_constraintTop_toTopOf="@+id/gdlTop"
         app:layout_constraintLeft_toRightOf="@+id/btnAir"
@@ -54,7 +51,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="806dp" />
+        tools:layout_editor_absoluteY="20dp" />
 
     <TextView
         android:id="@+id/txtWaterNPC"
@@ -64,9 +61,7 @@
         android:layout_marginLeft="10dp"
         android:text="0"
         app:layout_constraintTop_toBottomOf="@+id/btnWaterNPC"
-        app:layout_constraintLeft_toLeftOf="@+id/btnWaterNPC"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="503dp" />
+        app:layout_constraintLeft_toLeftOf="@+id/btnWaterNPC" />
 
     <TextView
         android:id="@+id/txtEarthNPC"
@@ -76,9 +71,7 @@
         android:layout_marginLeft="10dp"
         android:text="0"
         app:layout_constraintTop_toBottomOf="@+id/btnEarthNPC"
-        app:layout_constraintLeft_toLeftOf="@+id/btnEarthNPC"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="503dp" />
+        app:layout_constraintLeft_toLeftOf="@+id/btnEarthNPC" />
 
     <TextView
         android:id="@+id/txtAirNPC"
@@ -88,9 +81,7 @@
         android:layout_marginLeft="10dp"
         android:text="0"
         app:layout_constraintTop_toBottomOf="@+id/btnAirNPC"
-        app:layout_constraintLeft_toLeftOf="@+id/btnAirNPC"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="503dp" />
+        app:layout_constraintLeft_toLeftOf="@+id/btnAirNPC" />
 
     <TextView
         android:id="@+id/txtFireNPC"
@@ -100,9 +91,7 @@
         android:layout_marginLeft="10dp"
         android:text="0"
         app:layout_constraintTop_toBottomOf="@+id/btnFireNPC"
-        app:layout_constraintLeft_toLeftOf="@+id/btnFireNPC"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="503dp" />
+        app:layout_constraintLeft_toLeftOf="@+id/btnFireNPC" />
 
     <Button
         android:id="@+id/btnWater"
@@ -120,8 +109,7 @@
         android:text="@string/earth"
         app:layout_constraintBottom_toTopOf="@+id/gdlBottom"
         app:layout_constraintLeft_toRightOf="@+id/btnWater"
-        app:layout_constraintRight_toLeftOf="@+id/btnAir"
-        android:layout_marginBottom="0dp" />
+        app:layout_constraintRight_toLeftOf="@+id/btnAir" />
 
     <Button
         android:id="@+id/btnAir"
@@ -130,8 +118,7 @@
         android:text="@string/air"
         app:layout_constraintBottom_toTopOf="@+id/gdlBottom"
         app:layout_constraintLeft_toRightOf="@+id/btnEarth"
-        app:layout_constraintRight_toLeftOf="@+id/btnFire"
-        android:layout_marginBottom="0dp" />
+        app:layout_constraintRight_toLeftOf="@+id/btnFire" />
 
     <Button
         android:id="@+id/btnFire"
@@ -140,8 +127,7 @@
         android:text="@string/fire"
         app:layout_constraintBottom_toTopOf="@+id/gdlBottom"
         app:layout_constraintLeft_toRightOf="@+id/btnAir"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="0dp" />
+        app:layout_constraintRight_toRightOf="parent" />
 
 
     <android.support.constraint.Guideline
@@ -150,7 +136,7 @@
         android:id="@+id/gdlBottom"
         app:layout_constraintGuide_end="20dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="806dp"
+        tools:layout_editor_absoluteY="432dp"
         tools:layout_editor_absoluteX="0dp" />
 
     <TextView
@@ -161,9 +147,7 @@
         android:layout_marginLeft="10dp"
         android:text="0"
         app:layout_constraintBottom_toTopOf="@+id/btnWater"
-        app:layout_constraintLeft_toLeftOf="@+id/btnWater"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="503dp" />
+        app:layout_constraintLeft_toLeftOf="@+id/btnWater" />
 
     <TextView
         android:id="@+id/txtEarth"
@@ -173,9 +157,7 @@
         android:layout_marginLeft="10dp"
         android:text="0"
         app:layout_constraintBottom_toTopOf="@+id/btnEarth"
-        app:layout_constraintLeft_toLeftOf="@+id/btnEarth"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="503dp" />
+        app:layout_constraintLeft_toLeftOf="@+id/btnEarth" />
 
     <TextView
         android:id="@+id/txtAir"
@@ -185,9 +167,7 @@
         android:layout_marginLeft="10dp"
         android:text="0"
         app:layout_constraintBottom_toTopOf="@+id/btnAir"
-        app:layout_constraintLeft_toLeftOf="@+id/btnAir"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="503dp" />
+        app:layout_constraintLeft_toLeftOf="@+id/btnAir" />
 
     <TextView
         android:id="@+id/txtFire"
@@ -197,8 +177,38 @@
         android:layout_marginLeft="10dp"
         android:text="0"
         app:layout_constraintBottom_toTopOf="@+id/btnFire"
-        app:layout_constraintLeft_toLeftOf="@+id/btnFire"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="503dp" />
+        app:layout_constraintLeft_toLeftOf="@+id/btnFire" />
+
+    <TextView
+        android:id="@+id/txtScoreNPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        app:layout_constraintTop_toBottomOf="@+id/btnAirNPC"
+        android:layout_marginTop="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        app:layout_constraintBottom_toTopOf="@+id/btnAir"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/txtInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instructions"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -4,4 +4,14 @@
     <string name="water">Water</string>
     <string name="fire">Fire</string>
     <string name="earth">Earth</string>
+    <string name="instructions">
+        Water gets 2x power against Earth. \n
+        Earth gets 2x power against Air. \n
+        Air gets 2x power against Fire. \n
+        Fire gets 2x power against Water. \n
+        \n
+        +1 power to each element after use. \n
+        \n
+        Highest power wins round. \n
+    </string>
 </resources>
