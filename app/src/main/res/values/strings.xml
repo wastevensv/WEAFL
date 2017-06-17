@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WEAFL</string>
+    <string name="air">Air</string>
+    <string name="water">Water</string>
+    <string name="fire">Fire</string>
+    <string name="earth">Earth</string>
+</resources>

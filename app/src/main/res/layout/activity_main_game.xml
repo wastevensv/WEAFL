@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wastevensv.weafl.MainGame"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <Button
+        android:id="@+id/btnWaterNPC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/water"
+        app:layout_constraintTop_toTopOf="@+id/gdlTop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnEarth" />
+
+    <Button
+        android:id="@+id/btnEarthNPC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:text="@string/earth"
+        app:layout_constraintTop_toTopOf="@+id/gdlTop"
+        app:layout_constraintLeft_toRightOf="@+id/btnWater"
+        app:layout_constraintRight_toLeftOf="@+id/btnAir" />
+
+    <Button
+        android:id="@+id/btnAirNPC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:text="@string/air"
+        app:layout_constraintTop_toTopOf="@+id/gdlTop"
+        app:layout_constraintLeft_toRightOf="@+id/btnEarth"
+        app:layout_constraintRight_toLeftOf="@+id/btnFire" />
+
+    <Button
+        android:id="@+id/btnFireNPC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:text="@string/fire"
+        app:layout_constraintTop_toTopOf="@+id/gdlTop"
+        app:layout_constraintLeft_toRightOf="@+id/btnAir"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gdlTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="806dp" />
+
+    <TextView
+        android:id="@+id/txtWaterNPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@+id/btnWaterNPC"
+        app:layout_constraintLeft_toLeftOf="@+id/btnWaterNPC"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="503dp" />
+
+    <TextView
+        android:id="@+id/txtEarthNPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@+id/btnEarthNPC"
+        app:layout_constraintLeft_toLeftOf="@+id/btnEarthNPC"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="503dp" />
+
+    <TextView
+        android:id="@+id/txtAirNPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@+id/btnAirNPC"
+        app:layout_constraintLeft_toLeftOf="@+id/btnAirNPC"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="503dp" />
+
+    <TextView
+        android:id="@+id/txtFireNPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@+id/btnFireNPC"
+        app:layout_constraintLeft_toLeftOf="@+id/btnFireNPC"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="503dp" />
+
+    <Button
+        android:id="@+id/btnWater"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/water"
+        app:layout_constraintBottom_toTopOf="@+id/gdlBottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnEarth" />
+
+    <Button
+        android:id="@+id/btnEarth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/earth"
+        app:layout_constraintBottom_toTopOf="@+id/gdlBottom"
+        app:layout_constraintLeft_toRightOf="@+id/btnWater"
+        app:layout_constraintRight_toLeftOf="@+id/btnAir"
+        android:layout_marginBottom="0dp" />
+
+    <Button
+        android:id="@+id/btnAir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/air"
+        app:layout_constraintBottom_toTopOf="@+id/gdlBottom"
+        app:layout_constraintLeft_toRightOf="@+id/btnEarth"
+        app:layout_constraintRight_toLeftOf="@+id/btnFire"
+        android:layout_marginBottom="0dp" />
+
+    <Button
+        android:id="@+id/btnFire"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/fire"
+        app:layout_constraintBottom_toTopOf="@+id/gdlBottom"
+        app:layout_constraintLeft_toRightOf="@+id/btnAir"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="0dp" />
+
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gdlBottom"
+        app:layout_constraintGuide_end="20dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="806dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/txtWater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/btnWater"
+        app:layout_constraintLeft_toLeftOf="@+id/btnWater"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="503dp" />
+
+    <TextView
+        android:id="@+id/txtEarth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/btnEarth"
+        app:layout_constraintLeft_toLeftOf="@+id/btnEarth"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="503dp" />
+
+    <TextView
+        android:id="@+id/txtAir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/btnAir"
+        app:layout_constraintLeft_toLeftOf="@+id/btnAir"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="503dp" />
+
+    <TextView
+        android:id="@+id/txtFire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/btnFire"
+        app:layout_constraintLeft_toLeftOf="@+id/btnFire"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="503dp" />
+
+</android.support.constraint.ConstraintLayout>
